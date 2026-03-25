@@ -20,12 +20,6 @@ jobs:
           
       - name: maven compile
         run: mvn compile
-        
-      - name: Manual Trivy Setup
-        uses: aquasecurity/setup-trivy@v0.2.2
-        with:
-          cache: true
-          version: v0.69.3
                
       - name: Run Trivy vulnerability scanner in repo mode
         uses: aquasecurity/trivy-action@0.28.0
